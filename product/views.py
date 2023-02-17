@@ -15,7 +15,7 @@ class CancelView(TemplateView):
 
 def get_stripe_session(request, id):
     item = Item.objects.get(id=id)
-    DOMAIN = 'http://0.0.0.0:8000'
+    DOMAIN = settings.ALLOWED_HOSTS[0]
     session = stripe.checkout.Session.create(
         payment_method_types=['card'],
         line_items=[
