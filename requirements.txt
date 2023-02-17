@@ -1,0 +1,4 @@
+django==3.2.13
+psycopg2-binary
+stripe
+python-decouple==3.4
